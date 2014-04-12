@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<package>
+  <name>youbot_ros_control</name>
+  <version>0.1.0</version>
+  <description>Several packages for interfacing the youBot OODL driver with ros_control.</description>
+  <license>GPLv3</license>
+
+  <maintainer email="sven.schneider@h-brs.de">Sven Schneider</maintainer>
+  <author email="sven.schneider@h-brs.de">Sven Schneider</author>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <export>
+    <metapackage/>
+  </export>
+</package>
