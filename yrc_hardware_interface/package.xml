@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<package>
+  <name>yrc_hardware_interface</name>
+  <version>0.1.0</version>
+  <description>
+    This package contains two types of interfaces:
+    1) Extensions to the ros_control hardware interface to access the youBot via OODL.
+    2) A generic device interface for all youBot hardware components which enables a modular design of the ros_control
+       node of the youBot.
+  </description>
+  <license>GPLv3</license>
+
+  <maintainer email="sven.schneider@h-brs.de">Sven Schneider</maintainer>
+  <author email="sven.schneider@h-brs.de">Sven Schneider</author>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  
+  <build_depend>roscpp</build_depend>
+  <build_depend>hardware_interface</build_depend>
+  
+  <run_depend>roscpp</run_depend>
+  <run_depend>hardware_interface</run_depend>
+</package>

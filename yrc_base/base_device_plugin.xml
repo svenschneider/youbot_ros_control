@@ -1,0 +1,7 @@
+<library path="lib/libyrc_base">
+  <class type="yrc_base::BaseDeviceInterface" base_class_type="yrc_hardware_interface::DeviceInterface">
+    <description>
+    A plugin to interface the youBot's base with the ros_control library.
+    </description>
+  </class>
+</library>

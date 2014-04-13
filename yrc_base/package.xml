@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<package>
+  <name>yrc_base</name>
+  <version>0.1.0</version>
+  <description>The yrc_base package</description>
+  <license>GPLv3</license>
+
+  <maintainer email="sven.schneider@h-brs.de">Sven Schneider</maintainer>
+  <author email="sven.schneider@h-brs.de">Sven Schneider</author>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <build_depend>roscpp</build_depend>
+  <build_depend>pluginlib</build_depend>
+  <build_depend>hardware_interface</build_depend>
+  <build_depend>yrc_hardware_interface</build_depend>
+
+  <run_depend>roscpp</run_depend>
+  <run_depend>pluginlib</run_depend>
+  <run_depend>hardware_interface</run_depend>
+  <run_depend>yrc_hardware_interface</run_depend>
+
+  <export>
+    <yrc_hardware_interface plugin="${prefix}/base_device_plugin.xml" />
+  </export>
+</package>

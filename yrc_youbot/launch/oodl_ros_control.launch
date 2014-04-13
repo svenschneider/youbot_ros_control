@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+
+<launch>
+
+  <node name="oodl_ros_control" type="oodl_ros_control" pkg="yrc_youbot">
+    <param name="configuration_path" type="string" value="$(find youbot_driver)/config" />
+  </node>
+
+</launch>

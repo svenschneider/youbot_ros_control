@@ -1,0 +1,96 @@
+joint_state_controller:
+  type: joint_state_controller/JointStateController
+
+base_controller:
+  type: velocity_controllers/OmniBaseController
+  joints:
+    - base_fl
+    - base_fr
+    - base_bl
+    - base_br
+
+  power_switch_controller:
+    type: joint_operation_controller/PowerSwitchController
+
+  reconnect_controller:
+    type: joint_operation_controller/ReconnectController
+
+  position_joint_mode_controller:
+    type: joint_mode_controller/JointModeController
+    joint_mode: 1 # position
+
+  velocity_joint_mode_controller:
+    type: joint_mode_controller/JointModeController
+    joint_mode: 2 # velocity
+
+  effort_joint_mode_controller:
+    type: joint_mode_controller/JointModeController
+    joint_mode: 3 # effort
+
+  twist_mode_controller:
+    type: joint_mode_controller/JointModeController
+    joint_mode: 4 # misc
+
+
+arm_1_controller:
+  joint_trajectory_controller:
+    type: velocity_controllers/JointTrajectoryController
+    joints:
+      - arm_1/arm_joint_1
+      - arm_1/arm_joint_2
+      - arm_1/arm_joint_3
+      - arm_1/arm_joint_4
+      - arm_1/arm_joint_5
+    gains:
+      - arm_1/arm_joint_1: {p: 1.0, d: 0.0, i: 0.0, i_clamp: 1.0}
+      - arm_1/arm_joint_2: {p: 1.0, d: 0.0, i: 0.0, i_clamp: 1.0}
+      - arm_1/arm_joint_3: {p: 1.0, d: 0.0, i: 0.0, i_clamp: 1.0}
+      - arm_1/arm_joint_4: {p: 1.0, d: 0.0, i: 0.0, i_clamp: 1.0}
+      - arm_1/arm_joint_5: {p: 1.0, d: 0.0, i: 0.0, i_clamp: 1.0}
+
+  joint_velocity_controller:
+    type: velocity_controllers/MultiJointForwardVelocityController
+    joints:
+      - arm_1/arm_joint_1
+      - arm_1/arm_joint_2
+      - arm_1/arm_joint_3
+      - arm_1/arm_joint_4
+      - arm_1/arm_joint_5
+
+  power_switch_controller:
+    type: joint_operation_controller/PowerSwitchController
+  
+  reconnect_controller:
+    type: joint_operation_controller/ReconnectController
+
+  position_joint_mode_controller:
+    type: joint_mode_controller/JointModeController
+    joint_mode: 1 # position
+
+  velocity_joint_mode_controller:
+    type: joint_mode_controller/JointModeController
+    joint_mode: 2 # velocity
+
+  effort_joint_mode_controller:
+    type: joint_mode_controller/JointModeController
+    joint_mode: 3 # effort
+
+
+gripper_1_controller:
+  joint_trajectory_controller:
+    type: velocity_controllers/JointTrajectoryController
+    joints:
+      - gripper_1_finger_joint_l
+      - gripper_1_finger_joint_r
+    gains:
+      - gripper_1_finger_joint_l: {p: 1.0, d: 0.0, i: 0.0, i_clamp: 1.0}
+      - gripper_1_finger_joint_r: {p: 1.0, d: 0.0, i: 0.0, i_clamp: 1.0}
+
+  joint_velocity_controller:
+    type: velocity_controllers/MultiJointForwardVelocityController
+    joints:
+      - gripper_1_finger_joint_l
+      - gripper_1_finger_joint_r
+
+  type: joint_operation_controller/PowerSwitchController
+  type: joint_operation_controller/ReconnectController

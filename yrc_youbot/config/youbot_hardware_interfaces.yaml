@@ -1,0 +1,7 @@
+device_list:
+  base:
+    type: yrc_base::BaseDeviceInterface
+  arm_1:
+    type: yrc_arm::ArmDeviceInterface
+  gripper_1:
+    type: yrc_gripper::GripperDeviceInterface
